@@ -1,20 +1,7 @@
 import json
-import os
 import requests
 from api_framework.src.helper.write_json_file import WriteJsonFile
 
-# from api_framework.src.config.base_url import BaseUrl
-# from api_framework.src.utilities.endpoints import Endpoints
-#
-# base_url = BaseUrl()
-# endpoint = Endpoints()
-#
-# #reqres_api = os.path.realpath(os.path.join(os.path.dirname(__file__), '..','..', 'test','test_data', 'reqres_test_data.json'))
-# fake_rest_api = os.path.realpath(os.path.join(os.path.dirname(__file__), '..','..', 'test','test_data', 'fake_rest_api_test_data.json'))
-# object_name = "test_data"
-# final_post_url = base_url.reqres_api_domain + endpoint.reqres_patch_endpoint + "/2"
-# updated_payload = {"dueDate": "2023-01-10T16:54:54.883Z"}
-# added_payload = {"Dep" : "IT"}
 
 class ReadJsonFile(object):
 
@@ -50,8 +37,3 @@ class ReadJsonFile(object):
     def delete_method(self, url):
         response = requests.delete(url)
         return response
-
-
-
-# read_file = ReadJsonFile()
-# read_file.put_mehtod(fake_rest_api, object_name, final_post_url, added_payload, 1, base_url.headers)

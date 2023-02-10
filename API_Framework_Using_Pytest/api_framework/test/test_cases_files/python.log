@@ -1,0 +1,2 @@
+2023-02-10 13:23:46,487 | Logger | INFO | {'id': '1', 'name': 'john', 'job': 'Engineer', 'title': '90zgd', 'createdAt': '2023-02-10T07:53:43.700Z'}
+2023-02-10 13:23:46,488 | Logger | INFO | {'id': '2', 'name': 'mark', 'job': 'senior engineer', 'title': 'gq545', 'sal': 25000, 'designation': 'Engineer', 'createdAt': '2023-02-10T07:53:44.175Z'}
