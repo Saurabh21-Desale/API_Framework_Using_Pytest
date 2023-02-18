@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-            checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Saurabh21-Desale/API_Framework_Using_Pytest.git']])
+            git branch: 'feature_1', url: 'https://github.com/Saurabh21-Desale/API_Framework_Using_Pytest.git'
             }
         }
         stage('test') {
