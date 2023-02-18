@@ -13,6 +13,6 @@ class JsonFilesPath(object):
     json_file_path = os.path.realpath(
         os.path.join(os.path.dirname(__file__), '..', '..', 'test', 'test_data', 'csv_json_data.json'))
     csv_json_object_name = "test_data"
-    put_reuest_data = os.path.realpath(
-        os.path.join(os.path.dirname(__file__), '..', '..', 'test', 'test_data','put_request_data.json'))
-    csv_json_object_name = "test_data"
+    patch_request_data = os.path.realpath(
+        os.path.join(os.path.dirname(__file__), '..', '..', 'test', 'test_data','patch_request_data.json'))
+    patch_object_name = "test_data"

@@ -1,4 +1,6 @@
 #import logging as logger
+import time
+
 import pytest
 #from api_framework.test.test_cases_files.logging import logger
 from api_framework.src.config.base_url import BaseUrl
@@ -20,6 +22,8 @@ final_demo_url = base_url.fake_rest_api_domain + endpoint.fake_rest_api_endpoint
 @pytest.fixture(scope="module")
 def setup():
     csv_json_file.convert_csv_to_json(json_files_path.csv_file_path, json_files_path.json_file_path)
+    print("setup function")
+    #time.sleep(60)
 
 
 @pytest.mark.parametrize("test", read_json_file.post_method(json_files_path.json_file_path,
@@ -54,7 +58,7 @@ def test_get_request():
 def test_put_request():
     final_url = final_post_url + "/" + f'{id}'
     update_payload = {"sal": 25000, "designation": "Engineer"}
-    response = read_json_file.put_mehtod(json_files_path.put_reuest_data, json_files_path.fake_rest_api_object_name,
+    response = read_json_file.put_mehtod(json_files_path.patch_request_data, json_files_path.fake_rest_api_object_name,
                                          final_url, update_payload, id, base_url.headers)
     #print(response)
     data = response.json()
