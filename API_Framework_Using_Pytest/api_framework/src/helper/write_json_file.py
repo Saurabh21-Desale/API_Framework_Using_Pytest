@@ -26,6 +26,7 @@ class WriteJsonFile(object):
         file = json.loads(json_file)
         for self.add_multi_element in file[object_name]:
             if self.add_multi_element["id"] == body_id:
+                #self.add_multi_element.update({"title": f"{self.create_payload.create_title()}"})
                 self.add_multi_element.update(update_payload)
                 with open(payload, "w", encoding='utf-8') as json_file:
                     json.dump(file, json_file, indent=4)

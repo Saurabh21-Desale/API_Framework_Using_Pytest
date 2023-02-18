@@ -1,6 +1,6 @@
-import logging as logger
+#import logging as logger
 import pytest
-from api_framework.test.test_cases_files.logging import logger
+#from api_framework.test.test_cases_files.logging import logger
 from api_framework.src.config.base_url import BaseUrl
 from api_framework.src.utilities.endpoints import Endpoints
 from api_framework.src.utilities.json_files_path import JsonFilesPath
@@ -30,8 +30,8 @@ def setup():
 def test_post_request(setup, test):
     assert test.status_code == 201
     data = test.json()
-    logger.info(data)
-    #print(data)
+    #logger.info(data)
+    print(data)
     global id
     id = data["id"]
     #print("demo")
@@ -42,11 +42,11 @@ def test_post_request(setup, test):
 @pytest.mark.regression
 def test_get_request():
     final_url = final_post_url + f'/{id}'
-    #print(final_url)
+    print(final_url)
     response = read_json_file.get_method(final_url, base_url.headers)
     assert response.status_code == 200
     json_body = response.json()
-    #print(json_body)
+    print(json_body)
 
 
 @pytest.mark.sanity
@@ -54,11 +54,11 @@ def test_get_request():
 def test_put_request():
     final_url = final_post_url + "/" + f'{id}'
     update_payload = {"sal": 25000, "designation": "Engineer"}
-    response = read_json_file.put_mehtod(json_files_path.json_file_path, json_files_path.fake_rest_api_object_name,
+    response = read_json_file.put_mehtod(json_files_path.put_reuest_data, json_files_path.fake_rest_api_object_name,
                                          final_url, update_payload, id, base_url.headers)
     #print(response)
     data = response.json()
-    #print(data)
+    print(data)
 
 
 # def test_delete_object_put_request():
@@ -71,7 +71,7 @@ def test_put_request():
 def test_delete_request():
     final_url = final_post_url + "/" + f'{id}'
     response = read_json_file.delete_method(final_url)
-    #print(response)
+    print(response)
 
 
 @pytest.mark.parametrize("test_1", read_json_file.post_method(json_files_path.fake_rest_api,
@@ -80,5 +80,5 @@ def test_delete_request():
 def test_post_parameter(test_1):
     assert test_1.status_code == 200
     data = test_1.json()
-    #print(data)
+    print(data)
     #print(final_demo_url)

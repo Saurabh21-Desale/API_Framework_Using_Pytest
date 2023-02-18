@@ -1,2 +1,2 @@
-2023-02-10 13:23:46,487 | Logger | INFO | {'id': '1', 'name': 'john', 'job': 'Engineer', 'title': '90zgd', 'createdAt': '2023-02-10T07:53:43.700Z'}
-2023-02-10 13:23:46,488 | Logger | INFO | {'id': '2', 'name': 'mark', 'job': 'senior engineer', 'title': 'gq545', 'sal': 25000, 'designation': 'Engineer', 'createdAt': '2023-02-10T07:53:44.175Z'}
+2023-02-10 15:44:34,998 | Logger | INFO | {'id': '1', 'name': 'john', 'job': 'Engineer', 'title': 'rb5zo', 'createdAt': '2023-02-10T10:14:32.181Z'}
+2023-02-10 15:44:35,000 | Logger | INFO | {'id': '2', 'name': 'mark', 'job': 'senior engineer', 'title': '4i3re', 'sal': 25000, 'designation': 'Engineer', 'createdAt': '2023-02-10T10:14:32.660Z'}
