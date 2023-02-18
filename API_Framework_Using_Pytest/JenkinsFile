@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+            checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Saurabh21-Desale/API_Framework_Using_Pytest.git']])
+            }
+        }
+        stage('test') {
+            steps {
+             powershell 'pytest'
+            }
+        }
+         stage('Report') {
+            steps {
+             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'API_Framework_Using_Pytest', reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+            }
+        }
+    }
+}
