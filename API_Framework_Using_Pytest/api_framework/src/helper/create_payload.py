@@ -1,14 +1,16 @@
 import random
 
 
-class CreatePayload():
+class CreatePayload(object):
 
-    def create_title(self):
+    def create_email(self):
         text = ""
         possible = "abcdefghijklmnopqrstuvwxyz0123456789"
 
         for i in range(5):
             text += text.join(random.choices(possible))
 
-        return text
+        mail = text + "@harakirimail.com"
+        return mail
+
 

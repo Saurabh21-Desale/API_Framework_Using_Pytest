@@ -1,5 +1,5 @@
 
-class BaseUrl:
+class BaseUrl(object):
 
     fake_rest_api_domain = "https://fakerestapi.azurewebsites.net"
     reqres_api_domain = "https://reqres.in"

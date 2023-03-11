@@ -4,15 +4,17 @@
             "id": "1",
             "name": "john",
             "job": "Engineer",
-            "title": "ubsks"
+            "title": "s1psk",
+            "email": "pn1we@harakirimail.com"
         },
         {
             "id": "2",
             "name": "mark",
             "job": "senior engineer",
-            "title": "r560p",
+            "title": "yx2cl",
             "sal": 25000,
-            "designation": "Engineer"
+            "designation": "Engineer",
+            "email": "kqy6o@harakirimail.com"
         }
     ]
 }

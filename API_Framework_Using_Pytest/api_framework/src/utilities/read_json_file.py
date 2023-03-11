@@ -8,12 +8,14 @@ class ReadJsonFile(object):
     def __init__(self):
         self.load_json_file = WriteJsonFile()
 
-    def post_method(self, payload, object_names, url, header=None):
+    def post_method(self, payload, object_names, url=None, header=None):
         json_file = self.load_json_file.read_data_from_json_file(payload, object_names)
         file = json.loads(json_file)
+        resp = []
         for i in file[object_names]:
             response = requests.post(url, data=json.dumps(i), headers=header)
-            yield response
+            resp.append(response)
+        return resp
 
     def get_method(self, url, header=None):
         response = requests.get(url)
@@ -24,9 +26,8 @@ class ReadJsonFile(object):
         response = requests.put(url, data=json.dumps(data), headers=header)
         return response
 
-    def remove_object_put_method(self, payload, object_name, url, delete_payload, body_id, header=None):
-        data = self.load_json_file.delete_payload(payload, object_name, body_id, delete_payload)
-        response = requests.put(url, data=json.dumps(data), headers=header)
+    def delete_method(self, url):
+        response = requests.delete(url)
         return response
 
     def patch_method(self, payload, object_name, url, append_payload, body_id, header=None):
@@ -34,6 +35,23 @@ class ReadJsonFile(object):
         response = requests.patch(url, data=json.dumps(data), headers=header)
         return response
 
-    def delete_method(self, url):
-        response = requests.delete(url)
-        return response
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # def remove_object_put_method(self, payload, object_name, url, delete_payload, body_id, header=None):
+    #     data = self.load_json_file.delete_payload(payload, object_name, body_id, delete_payload)
+    #     response = requests.put(url, data=json.dumps(data), headers=header)
+    #     return response
