@@ -13,8 +13,6 @@ endpoint = Endpoints()
 json_files_path = JsonFilesPath()
 read_json_file = ReadJsonFile()
 
-# log = Log()
-# abc = log.custome_log(loglevel=logging.DEBUG)
 
 final_post_url = base_url.reqres_api_domain + endpoint.reqres_patch_endpoint
 
